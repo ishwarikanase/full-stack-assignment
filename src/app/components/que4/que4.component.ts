@@ -14,7 +14,7 @@ export class Que4Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.list = ["angular", "react"];
+    this.list = ["angular", "react","node"];
   }
 
   add() {
@@ -29,12 +29,17 @@ export class Que4Component implements OnInit {
   selected(event) {
     this.selectedItem = event.target.value;
     this.indexes.push(this.list.findIndex(x=>x==this.selectedItem));
+    this.indexes.sort();
+    this.indexes.reverse();
     console.log(this.indexes);
   }
 
   remove() {
     if(this.selectedItem!=null){
-      this.list.splice(0,this.indexes.length);
+      // this.list.splice(this.indexes.reduce(x=>x),this.indexes.length);
+      this.indexes.map(x=>{
+        console.log(this.list.splice(x,1));
+      })
     }
     else{
       alert("please select at least one item");
