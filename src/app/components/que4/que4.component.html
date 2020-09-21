@@ -1,0 +1,15 @@
+<div class="que4 mt-5">
+    <h1 class="mb-3">My Todo List</h1>
+    <div class="mb-3">
+        <input type="text" class="mr-2" [(ngModel)]="newTodoValue">
+        <button type="submit" (click)="add()">Add new</button>
+    </div>
+    <div class="mb-3">
+        <div *ngFor="let item of list">
+            <input type="checkbox" [value]=item (change)="selected($event)" >{{item}}
+        </div>
+        <div>
+            <button type="button" (click)=remove()>Remove marked</button>
+        </div>
+    </div>
+</div>

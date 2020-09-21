@@ -1,0 +1,7 @@
+li{
+    border-bottom: 1px solid black;
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
