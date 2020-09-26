@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Que2Component implements OnInit {
 
-  paragraph:String="Edit me..";
+  paragraph:String="Please hover to change the text";
   visible:boolean=false;
   constructor() { }
 

@@ -2,21 +2,19 @@
     <h1 class="mb-5">Services</h1>
     <div class="container-fluid">
         <div class="row mb-2" *ngFor="let item of list">
-            <div class="col-sm-10">
+            <div class="col-sm-9">
                 <input type="checkbox" [value]=item.price (change)="onchange($event)">{{item.name}}
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-3 mr-0">
                 {{item.price}}
             </div>
         </div>
-        <div class="total">
-            <div class="row">
-                <div class="col-sm">
-                    Total
-                </div>
-                <div class="col-sm">
-                    {{total}}
-                </div>
+        <div class="row mb-4">
+            <div class="col-sm-9 total">
+                Total
+            </div>
+            <div class="col-sm-3 total">
+                {{total}}
             </div>
         </div>
     </div>
